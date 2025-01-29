@@ -1,0 +1,6 @@
+<div style="margin: 10px;">
+    <app-title-header titleText="Dashboard" (onSearch)="GetDashboardCount($event)" [searchButton]="true" [startEndDates]="dateDashValue" [maxDate]="todayDate"></app-title-header>
+    <br>
+    <app-card-list [DataLoader]="dashboardCountLoading" [cardData]="dashboardCount"></app-card-list>
+    </div>
+    

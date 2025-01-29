@@ -1,0 +1,11 @@
+<a [routerLink]="['/']" class="brand-link">
+    <span class="brand-text" style="color: #fff;">PAYOUT</span>
+</a>
+<div class="sidebar">
+    <nav style="overflow: hidden;margin-top: 1rem;">
+        <span style="font-weight: bold;margin-left: 1rem;font-size: 0.7rem;">{{userCompany}}</span>
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <app-menu-item *ngFor="let item of menu" [menuItem]="item" ></app-menu-item>
+        </ul>
+    </nav>
+</div>

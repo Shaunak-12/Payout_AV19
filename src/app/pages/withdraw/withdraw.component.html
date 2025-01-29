@@ -1,0 +1,6 @@
+<app-title-header titleText="Withdraw Request"></app-title-header>
+<div class="card" style="margin: 10px;padding: 1rem;">
+  <app-title-header [exportLoader]="exportLoader" [showExport]="true" (onExport)="btnGridAction()" [startEndDates]="dateValue" [maxDate]="todayDate" [searchButton]="true" [searchHasInputOption]="true" (onSearch)="searchWithdraw($event)"></app-title-header>
+  <app-advance-table [DataLoader]="withdrawCollumnLoading" [rowCount]="rowCount" [TableCollumnData]="withdrawCollumns" [TableData]="withdrawRows" (onInputChange)="onValueChange($event)"></app-advance-table>
+  <app-advance-table-paginator [DataLoader]="withdrawCollumnLoading" [paginatorBlock]="paginatorBlock" [pageNo]="currentQuery.PageNo" [rowCount]="rowCount" [pageCount]="pageCount" [selectedPageCount]="currentQuery.PageSize" [pagesTotal]="pagesTotal" (onPaginatorChange)="onPaginatorChange($event)"></app-advance-table-paginator>
+</div>
